@@ -1,0 +1,24 @@
+<div class="container">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Company Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let company of companies;let rowIndex=index">
+                <td>{{company._id}}</td>
+                <td>{{company.cname}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="display: flex; justify-content: center;">
+        <a class="btn btn-secondary" [routerLink]="['/companies-add']">Add Company</a>
+        <a class="btn btn-danger" [routerLink]="['/companies-delete']">Delete Company</a>
+    </div>
+    
+
+</div>

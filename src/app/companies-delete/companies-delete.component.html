@@ -1,0 +1,13 @@
+<div class="jumbotron" style="margin: 5% 30% 0px 30%">
+    <h1 style="text-align: center;">Delete Company</h1>
+        <div>
+            <label>Company ID</label>
+            <br>
+            <input type="text" #compId/>
+            <br><br>
+            <input type="button" value="Delete Company" (click)="deleteCompany(compId.value)"/>
+        <br/>
+        </div>
+        
+    <p style="text-align: center;">{{result}}</p>
+</div>

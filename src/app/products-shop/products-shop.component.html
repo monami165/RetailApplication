@@ -1,0 +1,38 @@
+<main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1>Black Friday Ad Deals</h1>
+        <p class="lead text-muted">Shop items you want, with great savings</p>
+        <p>
+          <a href="#" class="btn btn-primary my-2">Black Friday Deals</a>
+          <a href="#" class="btn btn-secondary my-2">Other Deals</a>
+        </p>
+      </div>
+    </section>
+  
+    <div class="album py-5 bg-light">
+      <div class="container">
+  
+        <div class="row">
+
+          <div class="col-md-4" *ngFor="let p of products">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-body">
+                <p class="card-text">{{p.pname}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <a class="btn btn-sm btn-outline-secondary" [routerLink]="['/cart', { id:p._id }]">Add to cart</a>
+                  </div>
+                  <small class="text-muted">${{p.price}}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  
+  </main>
